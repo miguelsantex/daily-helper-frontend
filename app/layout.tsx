@@ -3,6 +3,7 @@ import { Khand } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ChakraProvider } from '@chakra-ui/react'
 
 const khand = Khand({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
 
@@ -19,7 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={khand.className}>
         <Navbar />
-        {children}
+        <ChakraProvider>
+          {children}
+        </ChakraProvider>
         <Footer />
       </body>
     </html>

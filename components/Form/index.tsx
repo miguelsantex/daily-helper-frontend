@@ -42,9 +42,9 @@ export default function DailyForm({ label }: DailyFormProps) {
   };
 
   return (
-    <div className='bg-brand-primary w-[40rem] items-center gap-20 flex-col flex justify-center rounded-lg p-16'>
+    <div className='bg-brand-primary 2xl:w-[40rem] items-center gap-20 flex-col flex justify-center rounded-lg  p-8 xl:p-16 w-[20rem]'>
       <div className='flex items-center justify-center w-full'>
-        <span className='text-white text-6xl'>{formType === 'login' ? 'Entrar' : formType === 'register' ? 'Cadastra-se' : 'Esqueci minha senha'}</span>
+        <span className='text-white text-2xl xl:text-6xl'>{formType === 'login' ? 'Entrar' : formType === 'register' ? 'Cadastra-se' : 'Esqueci minha senha'}</span>
       </div>
       <Formik
         initialValues={{ email: '', password: '', newPassword: '', name: '' }}
@@ -92,10 +92,10 @@ export default function DailyForm({ label }: DailyFormProps) {
               </>
             )}
 
-            <div className='flex flex-row items-center gap-4 justify-center w-full'>
+            <div className='flex flex-col xl:flex-row items-center gap-4 justify-center w-full'>
               <div className='flex flex-col gap-2'>
-                <span className='text-white text-2xl cursor-pointer' onClick={handleRegisterClick}>Não tem conta? Cadastra-se</span>
-                <span className='text-white text-2xl cursor-pointer' onClick={handleForgotPasswordClick}>Esqueci minha senha</span>
+                <span className='text-white text-lg xl:text-2xl cursor-pointer' onClick={handleRegisterClick}>Não tem conta? Cadastra-se</span>
+                <span className='text-white text-lg xl:text-2xl cursor-pointer' onClick={handleForgotPasswordClick}>Esqueci minha senha</span>
               </div>
               <DailyButton label={formType === 'login' ? 'Entrar' : formType === 'register' ? 'Cadastra-se' : 'Alterar'} type="submit" disabled={isSubmitting} />
             </div>
