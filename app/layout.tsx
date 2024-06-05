@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
-import { Khand } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { ChakraProvider } from '@chakra-ui/react'
+import { Metadata } from 'next';
+import { Khand } from 'next/font/google';
+import './globals.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import { AuthProvider } from './context/AuthContext';
 
-const khand = Khand({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
+const khand = Khand({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
 
 export const metadata: Metadata = {
-  title: "Daily Helper",
+  title: 'Daily Helper',
 };
 
 export default function RootLayout({
@@ -20,9 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={khand.className}>
         <Navbar />
-        <ChakraProvider>
+        <AuthProvider>
           {children}
-        </ChakraProvider>
+        </AuthProvider>
         <Footer />
       </body>
     </html>

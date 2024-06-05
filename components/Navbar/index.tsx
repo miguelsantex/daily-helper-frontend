@@ -18,7 +18,7 @@ export default function Navbar() {
     { id: 1, text: 'Home', link: '' },
     { id: 2, text: 'Suporte', link: '/support' },
     { id: 3, text: 'Sobre nós', link: '/about-us' },
-    { id: 4, text: 'Account', link: '/login' },
+    { id: 4, text: 'Account', link: '/profile' },
   ];
 
   return (
