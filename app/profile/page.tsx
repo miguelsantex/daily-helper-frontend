@@ -15,7 +15,7 @@ export default function Profile() {
     if (!user && !loading) {
       router.push('/login');
     }
-  }, [user, loading, router]);
+  }, [user, loading, router, logout]);
 
   return (
     <main className="w-full h-full bg-white flex flex-col items-center p-20 gap-8 justify-center lg:flex-row">
