@@ -18,7 +18,7 @@ export default function Profile() {
   }, [user, loading, router, logout]);
 
   return (
-    <main className="w-full h-full bg-white flex flex-col items-center p-20 gap-8 justify-center lg:flex-row">
+    <main className="w-full h-full bg-white flex flex-col items-center p-8 lg:p-20 gap-8 justify-center lg:flex-row">
       <div className="flex items-start w-full flex-col gap-[21rem]">
         <div className="flex flex-col">
           <span className="text-brand-primary text-6xl">Perfil</span>
@@ -29,7 +29,7 @@ export default function Profile() {
           <span className="text-brand-primary text-2xl" onClick={logout}>Sair da conta</span>
         </div>
       </div>
-      <div>
+      <div className='hidden lg:flex'>
         <Image src={profile} alt='Avatar' width={350} />
       </div>
     </main >

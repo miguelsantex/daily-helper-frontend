@@ -91,7 +91,7 @@ export default function Tasks() {
         <span className="text-brand-second text-6xl">Tarefas</span>
       </section>
       <section className="w-full flex items-center justify-center">
-        <div className="relative overflow-x-auto shadow-md sm:rounded-lg w-[60%]">
+        <div className="relative overflow-x-auto shadow-md sm:rounded-lg w-full lg:w-[60%]">
           <table className="w-full text-sm text-left rtl:text-right bg-white border  border-brand-second">
             <thead className="text-xs text-gray-700 uppercase bg-white p-8">
               <tr>

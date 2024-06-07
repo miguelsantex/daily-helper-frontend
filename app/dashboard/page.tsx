@@ -21,11 +21,11 @@ export default function Dashboard() {
     <main className="flex w-full flex-col h-full items-center justify-between">
       <section className="bg-[#5B93C4] justify-between w-full p-8 gap-20 h-full flex flex-row items-start">
         <div className="flex flex-col gap-32 items-start justify-start">
-          <span className="text-brand-primary text-6xl">Bem vindo ao DailyHelper, <br />
+          <span className="text-brand-primary text-3xl lg:text-6xl">Bem vindo ao DailyHelper, {user?.name} <br />
             Organize sua rotina e seja <br /> mais <span className="text-brand-second font-bold">produtivo!</span></span>
-          <a href="/daily" className="cursor-pointer bg-brand-second rounded-md text-[#5B93C4] p-4 text-7xl font-bold">Acesse sua agenda</a>
+          <a href="/daily" className="cursor-pointer bg-brand-second rounded-md text-[#5B93C4] p-4  text-3xl lg:text-7xl font-bold">Acesse sua agenda</a>
         </div>
-        <div className="flex justify-evenly">
+        <div className="lg:flex justify-evenly hidden">
           <Image alt="Hero" src={produtividade} width={900} />
         </div>
       </section>
